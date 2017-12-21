@@ -13,3 +13,5 @@ docker run \
     --volumes-from file-container \
     jwilder/dockerize \
     bash /src/test-nginx.sh
+
+docker ps -aq | xargs -r docker rm
