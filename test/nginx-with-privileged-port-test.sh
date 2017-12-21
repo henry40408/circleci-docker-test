@@ -2,7 +2,8 @@
 
 set -exo pipefail
 
-. ./functions.sh
+DIR="${BASH_SOURCE%/*}"
+source ${DIR}/functions.sh
 
 log "start nginx and ping the server"
 

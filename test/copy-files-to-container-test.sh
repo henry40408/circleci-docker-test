@@ -2,7 +2,8 @@
 
 set -exo pipefail
 
-. ./functions.sh
+DIR="${BASH_SOURCE%/*}"
+source ${DIR}/functions.sh
 
 log "copy files to nginx root directory and compare response body with curl"
 
