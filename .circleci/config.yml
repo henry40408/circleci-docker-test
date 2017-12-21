@@ -3,8 +3,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: alpine:3.5
+      - image: circleci/python:2.7.13
     steps:
       - checkout
       - setup_remote_docker
-      - run: sh test/nginx-with-privileged-port.sh
+      - run: bash test/nginx-with-privileged-port.sh
