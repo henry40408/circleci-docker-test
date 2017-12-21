@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 set -exo pipefail
 
 apk add --no-cache curl
 
-test "$(curl http://localhost)" = "foobar"
+RESPONSE=$(curl http://localhost)
+
+test "${RESPONSE}" = "foobar"
