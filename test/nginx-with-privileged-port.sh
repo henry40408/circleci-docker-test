@@ -2,4 +2,6 @@
 
 docker run -d -p 80:80 nginx
 
-curl http://${DOCKER_HOST}/
+IP_ADDRESS=$(echo ${DOCKER_HOST} | grep '^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$')
+
+curl http://${IP_ADDRESS}/
