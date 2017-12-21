@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -exo pipfail
+set -exo pipefail
 
 docker run -d --name nginx nginx
 
