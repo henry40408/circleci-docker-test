@@ -14,4 +14,4 @@ docker run \
     jwilder/dockerize \
     bash /src/test-nginx.sh
 
-docker ps -aq | xargs -r docker rm
+docker ps -aq | xargs -r docker rm -f
