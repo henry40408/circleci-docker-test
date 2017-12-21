@@ -1,5 +1,5 @@
 #!/bin/bash -exo pipefail
 
-docker run -d -p 80:80 nginx
+docker run -d --name nginx nginx
 
-curl http://localhost/
+docker run --network nginx:nginx jwilder/dockerize dockerize -wait http://nginx echo "success"
