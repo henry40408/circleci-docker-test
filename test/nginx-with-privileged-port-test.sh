@@ -2,7 +2,7 @@
 
 set -exo pipefail
 
-. ../lib/functions.sh
+. ./functions.sh
 
 log "start nginx and ping the server"
 

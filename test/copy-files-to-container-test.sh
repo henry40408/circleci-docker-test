@@ -2,7 +2,7 @@
 
 set -exo pipefail
 
-. ../lib/functions.sh
+. ./functions.sh
 
 log "copy files to nginx root directory and compare response body with curl"
 
