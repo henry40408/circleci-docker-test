@@ -7,5 +7,4 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: bash test/nginx-with-privileged-port-test.sh
-      - run: bash test/copy-files-to-container-test.sh
+      - run: find test -name '*-test.sh' -exec bash {} \+
